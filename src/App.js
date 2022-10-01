@@ -31,7 +31,9 @@ const App = () => {
   return (
     <>
     <header className='header'>
-      <h1>Jason Horst</h1>
+      <div className='cursorContainter'>
+        <h1>Jason Horst</h1><div className='cursor'></div>
+      </div>
       <div className='nav'>
         <ul className='leftList'>
           <li onClick={() => handleHome()}>Home</li>
