@@ -35,9 +35,9 @@ const App = () => {
   }
   return (
     <>
-    <header>
+    <header className='header'>
       <h1>Jason Horst</h1>
-      <nav>
+      <div className='nav'>
         <ul>
           <li onClick={() => handleHome()}>Home</li>
           <li onClick={() => handleProjects()}>Projects</li>
@@ -45,12 +45,13 @@ const App = () => {
           <li onClick={() => handleLinks()}>Links</li>
         </ul>
         <ul>
-          <li>Github</li>
-          <li>LinkedIn</li>
+          <a href='https://github.com/IntuitiveHarmony' target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href='https://www.linkedin.com/in/jason-horst/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href='mailto:j.horst77@gmail.com'><i class="fa-regular fa-envelope"></i></a>
         </ul>
-      </nav>
+      </div>
     </header>
-      <Body />
+      <Body home={home} projects={projects} resume={resume} links={links}/>
       <Footer />
     </>
   )
