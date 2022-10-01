@@ -39,11 +39,6 @@ const Body = (props) => {
       </div>
     : <></>}
 
-    {props.links  ?
-      <div className='contentContainer'>
-        <p>links</p>
-      </div>
-    : <></>}
 
     </>
   );

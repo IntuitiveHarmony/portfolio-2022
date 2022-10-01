@@ -27,22 +27,16 @@ const App = () => {
     setResume(true)
     setLinks(false)
   }
-  const handleLinks = () => {
-    setHome(false)
-    setProjects(false)
-    setResume(false)
-    setLinks(true)
-  }
+
   return (
     <>
     <header className='header'>
       <h1>Jason Horst</h1>
       <div className='nav'>
-        <ul>
+        <ul className='leftList'>
           <li onClick={() => handleHome()}>Home</li>
           <li onClick={() => handleProjects()}>Projects</li>
           <li onClick={() => handleResume()}>Resume</li>
-          <li onClick={() => handleLinks()}>Links</li>
         </ul>
         <ul>
           <a href='https://github.com/IntuitiveHarmony' target="_blank"><i class="fa-brands fa-github"></i></a>

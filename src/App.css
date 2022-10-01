@@ -16,8 +16,22 @@ body::after {
 }
 h1 {
   font-size: 3em;
-  margin-left: 1em;
+  margin-left: .7em;
   padding-top: .2em;
+}
+h1::after {
+  margin-left: .1em;
+  content: "";
+  width: 8px;
+  height: .75em;
+  background: cyan;
+  display: inline-block;
+  animation: cursor-blink 1.2s steps(2) infinite;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
 }
 .header {
   color: black;
@@ -57,6 +71,10 @@ a {
 a:hover {
   color: black;
   font-weight: bold;
+}
+.leftList {
+  margin-top: -2em;
+  margin-left: -1.5em;
 }
 .contentContainer {
   display: flex;
