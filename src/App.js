@@ -36,19 +36,19 @@ const App = () => {
       </div>
       <div className='nav'>
         <ul className='leftList'>
-          <li onClick={() => handleHome()}>Home</li>
-          <li onClick={() => handleProjects()}>Projects</li>
-          <li onClick={() => handleResume()}>Resume</li>
+          <li className='navLink' onClick={() => handleHome()}>Home</li>
+          <li className='navLink' onClick={() => handleProjects()}>Projects</li>
+          <li className='navLink' onClick={() => handleResume()}>Resume</li>
         </ul>
-        <ul>
-          <a href='https://github.com/IntuitiveHarmony' target="_blank"><i class="fa-brands fa-github"></i></a>
-          <a href='https://www.linkedin.com/in/jason-horst/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-          <a href='mailto:j.horst77@gmail.com'><i class="fa-regular fa-envelope"></i></a>
+        <ul className='rightList'>
+          <a className='navSocial' href='https://github.com/IntuitiveHarmony' target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a className='navSocial' href='https://www.linkedin.com/in/jason-horst/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a className='navSocial' href='mailto:j.horst77@gmail.com'><i class="fa-regular fa-envelope"></i></a>
         </ul>
       </div>
     </header>
       <Body home={home} projects={projects} resume={resume} links={links}/>
-      <Footer />
+    {/*<Footer />*/}
     </>
   )
 }

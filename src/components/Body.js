@@ -19,16 +19,19 @@ const Body = (props) => {
 
     {props.projects  ?
       <>
-        <div className='contentContainer'>
+
+        <div className='columnContainer'>
           <h2>Projects</h2>
-          <h3>Rock, Paper, Scissor</h3>
-          <p>This was probably the first games I built using code. It may be simple, but I wanted to include it here to pay homage to my humble beginings </p>
+          <div className='projectContainer'>
+            <h3>Kingfisher Tie Dye</h3>
+            <img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" />
+            <ul>
+              <li className='projectBullet'>Full stack CRUD app that allows this small business to showcase their work and connect with their customer base</li>
+              <li className='projectBullet'>Built using Express, AtlasDB, jQuery, HTML5, CSS3, JavaScript, Heroku</li>
+            </ul>
+          </div>
         </div>
-        <div className='contentContainer'>
-          <h2>Projects</h2>
-          <h3>Rock, Paper, Scissor</h3>
-          <p>This was probably the first games I built using code. It may be simple, but I wanted to include it here to pay homage to my humble beginings </p>
-        </div>
+
 
       </>
     : <></>}
