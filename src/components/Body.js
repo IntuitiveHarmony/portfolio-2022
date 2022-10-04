@@ -20,15 +20,40 @@ const Body = (props) => {
     {props.projects  ?
       <>
 
-        <div className='columnContainer'>
+        <div className='projectContainer'>
           <h2>Projects</h2>
-          <div className='projectContainer'>
-            <h3>Kingfisher Tie Dye</h3>
-            <img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" />
-            <ul>
-              <li className='projectBullet'>Full stack CRUD app that allows this small business to showcase their work and connect with their customer base</li>
-              <li className='projectBullet'>Built using Express, AtlasDB, jQuery, HTML5, CSS3, JavaScript, Heroku</li>
-            </ul>
+          <div className='projectDeck'>
+            <div className='projectCard'>
+              <h3>Kingfisher Tie Dye</h3>
+              <a href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" /></a>
+              <ul>
+                <li className='projectBullet'>Full stack CRUD app that allows this business to showcase their work and connect with their customers</li>
+                <li className='projectBullet'>Built using Express, AtlasDB, jQuery, HTML5, CSS3, JavaScript, Heroku</li>
+              </ul>
+            </div>
+            <div className='projectCard'>
+              <h3>Tile-r</h3>
+              <a href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Tile-r.png'} alt="Tile-r Thumbnail" /></a>
+              <ul>
+                <li className='projectBullet'>React app that allows user to tile and scale images from the web</li>
+                <li className='projectBullet'>I built this app to easily tile images that I was producing using the Midjourney bot</li>
+                <details>
+                  <summary>Sample Images (Paste url into Tile-r)</summary>
+                    <li className='projectBullet'>https://mj-gallery.com/6e3777c3-7a96-43cb-885b-a841a7eab4ca/grid_0.png</li>
+                    <li className='projectBullet'>https://mj-gallery.com/64b8ab76-5703-4b0a-9130-8e5bf5f8a1fe/grid_0.png</li>
+                    <li className='projectBullet'>https://mj-gallery.com/52db2954-b7b0-43c6-bf58-f4ba92855f34/grid_0.png</li>
+                </details>
+              </ul>
+            </div>
+            <div className='projectCard'>
+              <h3>PolyBeast</h3>
+              <a href='https://intuitiveharmony.github.io/breeze_front/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Polybeast.png'} alt="Polybeast Thumbnail" /></a>
+              <ul>
+                <li className='projectBullet'>Full stack CRUD app that allows the user to make musical sequences of varying complexity, save their creation and edit it later</li>
+                <li className='projectBullet'>Collaborated with <a className='pinkLink' href='https://github.com/ampersand22' target="_blank" rel="noopener noreferrer">Jey Ulmer</a> to build this project</li>
+                <li className='projectBullet'>Built using Django, Python, React, Redux, Tone.js, Reactronica, HTML5, CSS3, JavaScript, Heroku</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -37,8 +62,10 @@ const Body = (props) => {
     : <></>}
 
     {props.resume  ?
-      <div>
-        <p>Resume</p>
+      <div className='projectContainer'>
+        <h2>Resume</h2>
+        <p>Click on Resume to Download</p>
+        <a href="/Jason-Horst-Resume-2022.pdf" download><img className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" /></a>
       </div>
     : <></>}
 

@@ -13,12 +13,17 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;
+  height: 100vh;
 }
 h1 {
   font-size: 2.5em;
   margin-left: .7em;
   margin-top: .3em;
   /* padding-top: .2em; */
+}
+summary {
+  cursor: pointer;
+  margin-bottom: .5em;
 }
 .cursorContainter {
   display: flex;
@@ -96,7 +101,7 @@ h1 {
   filter: hue-rotate(85deg) saturate(300%);
   max-width: 20em;
 }
-.columnContainer {
+.projectContainer {
   display: flex;
   flex-direction: column;
   color: rgb(0, 180, 255);
@@ -105,18 +110,34 @@ h1 {
   padding: 2em;
 }
 .projectImage {
-  max-width: 15em;
+  max-width: 17em;
+  border-radius: 1em;
 }
-.projectContainer {
+.projectDeck {
   display: flex;
-  flex-direction: column;
-  color: rgb(0, 180, 255);
-  /* background-color: rgba(0, 0, 0, .7); */
-  /* margin: 5em;
-  padding: 2em; */
+  flex-wrap: wrap;
+}
+.projectCard {
+  margin: .5em;
+  text-align: center;
+  padding: 1em;
+  max-width: 25em;
+  border-radius: 2em;
+  /* box-shadow: 0px 0px 50px magenta; */
 }
 .projectBullet {
-
+  list-style-type: none;
+  margin-left: -2.5em;
+  margin-bottom: .5em;
+}
+.pinkLink {
+  cursor: pointer;
+  color: magenta;
+  text-decoration: none;
+}
+.resumeImage {
+  cursor: pointer;
+  max-width: 35em;
 }
 .footer {
   padding-left: 2em;
