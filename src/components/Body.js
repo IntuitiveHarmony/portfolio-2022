@@ -1,15 +1,7 @@
-import { saveAs } from 'file-saver'
+
 
 
 const Body = (props) => {
-
-  const download = () => {
-    saveAs(
-      'https://intuitiveharmony.github.io/portfolio-2022/Jason-Horst-Resume-2022.pdf',
-      'Jason Horst Resume 2022.pdf'
-    )
-  }
-
 
   return (
     <>
@@ -32,7 +24,7 @@ const Body = (props) => {
           <h2>Projects</h2>
           <div className='projectDeck'>
             <div className='projectCard'>
-              <h3>Kingfisher Tie Dye</h3>
+              <a className='pinkLink' href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><h3>Kingfisher Tie Dye</h3></a>
               <a href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>Full stack CRUD app that allows this business to showcase their work and connect with their customers</li>
@@ -40,11 +32,11 @@ const Body = (props) => {
               </ul>
             </div>
             <div className='projectCard'>
-              <h3>Tile-r</h3>
+              <a className='pinkLink' href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><h3>Tile-r</h3></a>
               <a href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Tile-r.png'} alt="Tile-r Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>React app that allows user to tile and scale images from the web</li>
-                <li className='projectBullet'>I built this app to easily tile images that I was producing using the Midjourney bot</li>
+                <li className='projectBullet'>I built this app to easily tile images that I was producing using <a className='pinkLink' href='https://www.midjourney.com/app/users/994343313958252645/' target="_blank" rel="noopener noreferrer">Midjourney</a> AI</li>
                 <details>
                   <summary>Sample Images (Paste url into Tile-r)</summary>
                     <li className='projectBullet'>https://mj-gallery.com/6e3777c3-7a96-43cb-885b-a841a7eab4ca/grid_0.png</li>
@@ -54,11 +46,11 @@ const Body = (props) => {
               </ul>
             </div>
             <div className='projectCard'>
-              <h3>PolyBeast</h3>
+              <a className='pinkLink' href='https://intuitiveharmony.github.io/breeze_front/' target="_blank" rel="noopener noreferrer"><h3>PolyBeast</h3></a>
               <a href='https://intuitiveharmony.github.io/breeze_front/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Polybeast.png'} alt="Polybeast Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>Full stack CRUD app that allows the user to make musical sequences of varying complexity, save their creation and edit it later</li>
-                <li className='projectBullet'>Collaborated with <a className='pinkLink' href='https://github.com/ampersand22' target="_blank" rel="noopener noreferrer">Jey Ulmer</a> to build this project</li>
+                <li className='projectBullet'>Collaborated with <a className='pinkLink' href='https://www.linkedin.com/in/jey-ulmer-70b141247/' target="_blank" rel="noopener noreferrer">Jey Ulmer</a> to build this project</li>
                 <li className='projectBullet'>Built using Django, Python, React, Redux, Tone.js, Reactronica, HTML5, CSS3, JavaScript, Heroku</li>
               </ul>
             </div>
@@ -72,8 +64,7 @@ const Body = (props) => {
     {props.resume  ?
       <div className='projectContainer'>
         <h2>Resume</h2>
-        <p>Click on Resume to Download</p>
-      <img onClick={() => download()} className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" />
+      <img className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" />
       </div>
     : <></>}
 
