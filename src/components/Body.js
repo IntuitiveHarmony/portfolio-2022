@@ -1,7 +1,15 @@
-import { useState } from 'react'
+import { saveAs } from 'file-saver'
 
 
 const Body = (props) => {
+
+  const download = () => {
+    saveAs(
+      'https://intuitiveharmony.github.io/portfolio-2022/Jason-Horst-Resume-2022.pdf',
+      'Jason Horst Resume 2022.pdf'
+    )
+  }
+
 
   return (
     <>
@@ -65,7 +73,7 @@ const Body = (props) => {
       <div className='projectContainer'>
         <h2>Resume</h2>
         <p>Click on Resume to Download</p>
-        <a href="/Jason-Horst-Resume-2022.pdf" download><img className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" /></a>
+      <img onClick={() => download()} className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" />
       </div>
     : <></>}
 
