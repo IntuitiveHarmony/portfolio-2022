@@ -58,7 +58,7 @@ const Body = (props) => {
               <a className='pinkLink' href='https://sleepy-gorge-06614.herokuapp.com/' target="_blank" rel="noopener noreferrer"><h3>Movie Database</h3></a>
               <a href='https://sleepy-gorge-06614.herokuapp.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/MovieApp.png'} alt="Movie App Thumbnail" /></a>
               <ul>
-                <li className='projectBullet'>Full stack CRUD app that allows user to search The Movie Database Api and save movies in a 'My Movies' which is then stored in our own database</li>
+                <li className='projectBullet'>Full stack CRUD app that allows user to search The Movie Database Api and save movies into 'My Movies' which is then stored in our own database</li>
                 <li className='projectBullet'>Collaborated with <a className='pinkLink' href='https://www.linkedin.com/in/tylernenninger/' target="_blank" rel="noopener noreferrer">Tyler Nenninger</a> to build this project</li>
                 <li className='projectBullet'>Built using Express, AtlasDB, React, HTML5, CSS3, JavaScript, Github, Heroku</li>
               </ul>
