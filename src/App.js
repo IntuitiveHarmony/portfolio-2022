@@ -41,9 +41,9 @@ const App = () => {
           <li className='navLink' onClick={() => handleResume()}>Resume</li>
         </ul>
         <ul className='rightList'>
-          <a className='navSocial' href='https://github.com/IntuitiveHarmony' target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-          <a className='navSocial' href='https://www.linkedin.com/in/jason-horst/' target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-          <a className='navSocial' href='mailto:j.horst77@gmail.com'><i class="fa-regular fa-envelope"></i></a>
+          <a className='navSocial' href='https://github.com/IntuitiveHarmony' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github"></i></a>
+          <a className='navSocial' href='https://www.linkedin.com/in/jason-horst/' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-linkedin"></i></a>
+          <a className='navSocial' href='mailto:j.horst77@gmail.com'><i className="soc fa-regular fa-envelope"></i></a>
         </ul>
       </div>
     </header>

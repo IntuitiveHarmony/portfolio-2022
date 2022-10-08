@@ -153,3 +153,46 @@ summary {
   width: 100%;
   height: 2.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    /* background-color: yellow; */
+  }
+  .nav {
+    color: cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: .2em;
+  }
+  .leftList {
+    margin-top: -2.7em;
+    z-index: 3;
+  }
+  .rightList {
+    display: flex;
+    max-height: 10em;
+    margin-top: -2.5em;
+    margin-left: 1em;
+    margin-bottom: .2em;
+    padding: ;
+  }
+  .contentContainer {
+    padding: 1em;
+    margin-left: 1em;
+    width: 90%;
+    flex-direction: column;
+  }
+  .aboutContainer {
+    display: flex;
+  flex-direction: column;
+  }
+  .bioImage {
+    max-width: 15em;
+  }
+  .aboutContainer {
+    width: 100%;
+  }
+}
