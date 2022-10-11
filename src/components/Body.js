@@ -75,7 +75,7 @@ const Body = (props) => {
         <h2>Resume</h2>
       <img className='resumeImage' src={process.env.PUBLIC_URL + '/resumeImg.png'} alt="Resume Thumbnail" />
       </div>
-    : <></>}
+    : <></>} 
 
 
     </>

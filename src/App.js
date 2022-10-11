@@ -38,7 +38,7 @@ const App = () => {
         <ul className='leftList'>
           <li className='navLink' onClick={() => handleHome()}>Home</li>
           <li className='navLink' onClick={() => handleProjects()}>Projects</li>
-          <li className='navLink' onClick={() => handleResume()}>Resume</li>
+        {/*  <li className='navLink' onClick={() => handleResume()}>Resume</li> */}
         </ul>
         <ul className='rightList'>
           <a className='navSocial' href='https://github.com/IntuitiveHarmony' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github"></i></a>
