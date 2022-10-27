@@ -135,14 +135,22 @@ summary {
   margin-left: -2.5em;
   margin-bottom: .5em;
 }
+.rpsContainer {
+  display: flex;
+}
+.rpsHand {
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid grey;
+}
+.rpsHand:hover {
+  color: magenta;
+}
 .pinkLink {
   cursor: pointer;
   color: magenta;
   text-decoration: none;
-}
-.resumeImage {
-  cursor: pointer;
-  max-width: 35em;
 }
 .footer {
   padding-left: 2em;
