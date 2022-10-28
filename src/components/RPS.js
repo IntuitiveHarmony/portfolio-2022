@@ -88,62 +88,56 @@ const RPS = () => {
   }
 
   return (
-    <div className='projectContainer'>
+    <div className='gamesContainer'>
       <h3>Rock Paper Scissor</h3>
       <div className='rpsContainer'>
         <div className='rpsHand' onClick={() => handleRock()}>Rock</div>
         <div className='rpsHand' onClick={() => handlePaper()}>Paper</div>
         <div className='rpsHand' onClick={() => handleScissor()}>Scissor</div>
+        </div>
+        <div className='rpsOutput'>
         {tie ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Tie game!</p>
           </>
-          : <p></p> }
+          : <></> }
         {rock_scissor ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Player Wins!</p>
           </>
-          : <p></p> }
+          : <></> }
         {rock_paper ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Computer Wins!</p>
           </>
-          : <p></p> }
+          : <></> }
         {paper_scissor ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Computer Wins!</p>
           </>
-          : <p></p> }
+          : <></> }
         {paper_rock ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Player Wins!</p>
           </>
-          : <p></p> }
+          : <></> }
         {scissor_rock ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Computer Wins!</p>
           </>
-          : <p></p> }
+          : <></> }
         {scissor_paper ?
           <>
-            <p>Player Chose: {playerMove}</p>
-            <p>Computer Chose: {computerMove}</p>
+            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
             <p>Player Wins!</p>
           </>
-          : <p></p> }
-
+          : <></> }
       </div>
     </div>
   )

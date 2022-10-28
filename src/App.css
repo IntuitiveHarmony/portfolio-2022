@@ -135,6 +135,10 @@ summary {
   margin-left: -2.5em;
   margin-bottom: .5em;
 }
+.gamesContainer {
+  display: flex;
+  flex-direction: column;
+}
 .rpsContainer {
   display: flex;
 }
@@ -143,6 +147,10 @@ summary {
   padding: 1em;
   margin: 1em;
   border: 1px solid grey;
+}
+.rpsOutput {
+  display: flex;
+  flex-direction: column;
 }
 .rpsHand:hover {
   color: magenta;
