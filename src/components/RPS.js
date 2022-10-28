@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 
 const RPS = () => {
-//  State will indicate the winner of each hand
   const [playerMove, setPlayerMove] = useState()
   const [computerMove, setComputerMove] = useState()
   const [tie, setTie] = useState()
