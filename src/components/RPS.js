@@ -89,7 +89,7 @@ const RPS = () => {
 
   return (
     <div className='gamesContainer'>
-      <h3>Rock Paper Scissor</h3>
+      <h3>Rock Paper Scissor <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/RPS.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink"></i></a></h3>
       <div className='rpsContainer'>
         <div className='rpsHand' onClick={() => handleRock()}>Rock</div>
         <div className='rpsHand' onClick={() => handlePaper()}>Paper</div>
@@ -98,43 +98,43 @@ const RPS = () => {
         <div className='rpsOutput'>
         {tie ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='yellowTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='yellowTxt'>{computerMove}</span></p>
             <p>Tie game!</p>
           </>
           : <></> }
         {rock_scissor ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='greenTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='redTxt'>{computerMove}</span></p>
             <p>Player Wins!</p>
           </>
           : <></> }
         {rock_paper ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }
         {paper_scissor ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }
         {paper_rock ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='greenTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='redTxt'>{computerMove}</span></p>
             <p>Player Wins!</p>
           </>
           : <></> }
         {scissor_rock ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }
         {scissor_paper ?
           <>
-            <p>Player Chose: {playerMove} &emsp; Computer Chose: {computerMove}</p>
+            <p>Player Chose: <span className='greenTxt'>{playerMove}</span> &emsp; Computer Chose: <span className='redTxt'>{computerMove}</span></p>
             <p>Player Wins!</p>
           </>
           : <></> }

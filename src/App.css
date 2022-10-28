@@ -190,6 +190,9 @@ input:focus {
   color: magenta;
   text-decoration: none;
 }
+.pinkLink:hover {
+  text-decoration: underline;
+}
 .footer {
   padding-left: 2em;
   color: rgb(0, 180, 255);
