@@ -25,6 +25,36 @@ summary {
   cursor: pointer;
   margin-bottom: .5em;
 }
+input {
+  background-color: rgb(60,60,60);
+  color: magenta;
+  font-size: 1.2em;
+  max-width: 300px;
+}
+input:focus {
+  border: 0;
+  outline-color: rgb(0, 180, 255);
+}
+.yellowTxt {
+  color: yellow;
+}
+.greenTxt {
+  color: lime;
+}
+.redTxt {
+  color: red;
+}
+.submitBtn{
+  max-width: 3em;
+  display: inline;
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid grey;
+}
+.submitBtn:hover {
+  color: magenta;
+}
 .cursorContainter {
   display: flex;
 }
