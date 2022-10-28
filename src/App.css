@@ -193,6 +193,9 @@ input:focus {
 .pinkLink:hover {
   text-decoration: underline;
 }
+.gitLink:hover {
+  text-decoration: none;
+}
 .footer {
   padding-left: 2em;
   color: rgb(0, 180, 255);

@@ -88,7 +88,7 @@ const RPS = () => {
 
   return (
     <div className='gamesContainer'>
-      <h3>Rock Paper Scissor <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/RPS.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink"></i></a></h3>
+      <h3>Rock Paper Scissor <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/RPS.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
       <div className='rpsContainer'>
         <div className='rpsHand' onClick={() => handleRock()}>Rock</div>
         <div className='rpsHand' onClick={() => handlePaper()}>Paper</div>

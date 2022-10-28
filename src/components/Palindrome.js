@@ -51,8 +51,8 @@ const Palindrome = () => {
   return (
     <>
       <div className='gamesContainer'>
-        <h3>Palindrome Checker <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Palindrome.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink"></i></a></h3>
-        <p>This was inspired by a challenge from <a className='pinkLink' href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/palindrome-checker' target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a><br/><span className='yellowTxt'># _ , . ! * ( )</span> and <span className='yellowTxt'>spaces</span> will be removed from the input</p>
+        <h3>Palindrome Checker <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Palindrome.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
+        <p>Inspired by a challenge from <a className='pinkLink' href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/palindrome-checker' target="_blank" rel="noopener noreferrer">freeCodeCamp.org</a><br/><span className='yellowTxt'># _ , . ! * ( )</span> and <span className='yellowTxt'>spaces</span> will be removed from the input</p>
           <input onChange={handleInputStr} placeholder='ex. Taco cat!'></input>
           <div className='submitBtn' onClick={() => palindrome(inputStr)}>Check</div>
           {pass ?
