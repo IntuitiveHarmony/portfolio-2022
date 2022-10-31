@@ -185,6 +185,29 @@ input:focus {
 .rpsHand:hover {
   color: magenta;
 }
+.RGBView {
+  width: 15em;
+  height: 15em;
+  border: 1px solid gold;
+}
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 10em;
+  height: 25px;
+  outline: none;
+}
+.sliderBox {
+  display: flex;
+}
+.sliderLabel {
+  margin: 0 0;
+  font-size:  1.3em;
+}
+
 .pinkLink {
   cursor: pointer;
   color: magenta;
