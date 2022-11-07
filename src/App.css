@@ -35,6 +35,16 @@ input:focus {
   border: 0;
   outline-color: rgb(0, 180, 255);
 }
+select {
+  background-color: rgb(60,60,60);
+  color: lime;
+  max-width: 300px;
+}
+option {
+  background-color: rgb(60,60,60);
+  color: lime;
+  max-width: 300px;
+}
 .yellowTxt {
   color: yellow;
 }

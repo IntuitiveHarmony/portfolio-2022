@@ -6,8 +6,7 @@ const Bored = () => {
   const [selected, setSelected] = useState(false)
   const [type, setType] = useState()
   const [price, setPrice] = useState()
-  const [current, setCurrent] = useState()
-  const [previous, setPrevious] = useState()
+  const [list, setList] = useState([])
 
   const handleBored = () => {
       selected ?
@@ -21,17 +20,8 @@ const Bored = () => {
             .get('https://www.boredapi.com/api/activity')
             .then((response)=>{
                 setBored(response.data)
-                setCurrent(response.data.key)
-                setPrevious(current)
+                setList([...list, { activity: response.data.activity, key: response.data.key }])
             })
-  }
-
-  const handlePrevious = () => {
-    axios
-        .get(`https://www.boredapi.com/api/activity?key=${previous}`)
-        .then((response)=>{
-            setBored(response.data)
-        })
   }
   const handleType = (e) => {
     setSelected(true)
@@ -50,7 +40,7 @@ const Bored = () => {
   return (
     <>
       <h3>I'm Bored <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Bored.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
-      <p>Feeling uninspired? <br/> Make a few optional selections and a random activity will be generated. <br/><br/> Powered by the <a href='https://www.boredapi.com/' target="_blank" rel="noopener noreferrer" className='pinkLink'>Bored Api</a></p>
+      <p>Feeling uninspired? <br/> - Use the dropdown to pick a type (optional) <br/> - Press the button to generate a random activity <br/>- Keep pressing the buttin to make a list <br/><br/> Powered by the <a href='https://www.boredapi.com/' target="_blank" rel="noopener noreferrer" className='pinkLink'>Bored Api</a></p>
       <select onChange={handleType}>
         <option disabled selected>Select Type (optional)</option>
         {bored ? bored.type === 'education' ? <option value='education' selected>Education</option> : <option value='education'>Education</option> : <option value='education'>Education</option> }
@@ -82,10 +72,11 @@ const Bored = () => {
         </>
         : <></> }
       <div className='submitBtn' onClick={() => handleBored()} >Get Activity</div>
-      {previous ?
-        <>
-          <div className='submitBtn' onClick={() => handlePrevious()} >Previous</div></>
-          : <></>}
+      <ul>
+      {list.map((item) =>
+        <li><a href={'http://www.boredapi.com/api/activity?key=' + item.key} className='pinkLink' target="_blank" rel="noopener noreferrer">({item.key})</a> {item.activity}</li>
+      )}
+      </ul>
     </>
   )
 }
