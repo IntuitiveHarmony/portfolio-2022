@@ -146,7 +146,7 @@ input:focus {
   /* box-shadow: 0px 0px 50px magenta; */
 }
 .projectImage:hover {
-  box-shadow: 0px 0px 250px yellow;
+  box-shadow: 0px 0px 75px magenta;
 }
 .projectDeck {
   display: flex;
@@ -168,6 +168,7 @@ input:focus {
 .gamesContainer {
   display: flex;
   flex-direction: column;
+  width: 30em;
 }
 .rpsContainer {
   display: flex;
@@ -188,8 +189,17 @@ input:focus {
 .RGBView {
   width: 15em;
   height: 15em;
-  border: 1px solid gold;
+  border: 1px solid rgb(0, 180, 255);
+  z-index: 5;
 }
+/* .RGBViewBack {
+  opacity: .3;
+  position: absolute;
+  width: 15em;
+  height: 15em;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/220px-Image_created_with_a_mobile_phone.png');
+  z-index: 3;
+} */
 .sliderContainer {
   display: flex;
   flex-direction: column;
@@ -197,15 +207,23 @@ input:focus {
 .slider {
   -webkit-appearance: none;
   width: 10em;
-  height: 25px;
+  height: .5em;
   outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid rgb(0, 180, 255);
+  width: .7em;
+  height: .5em;
+  background: black;
+  cursor: pointer;
 }
 .sliderBox {
   display: flex;
 }
 .sliderLabel {
   margin: 0 0;
-  font-size:  1.3em;
 }
 
 .pinkLink {

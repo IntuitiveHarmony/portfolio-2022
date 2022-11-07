@@ -1,6 +1,5 @@
 
 import Games from './Games'
-import RGBSlider from './RGBSlider'
 
 const Body = (props) => {
 
@@ -12,7 +11,6 @@ const Body = (props) => {
           <h2>About me</h2>
           <p>If I’m not taking something apart to understand how it works, I’m fixing something that I broke while taking it apart to understand how it worked. Curiosity, knowledge, growth and improvement are all motivators for me to keep expanding upon my various disciplines of study. I continually draw upon my varied experiences from the music, management, HVAC, plumbing, culinary and coding worlds. I combine them with my explorations of philosophy and logic in order to enrich my life and the lives of others.</p>
         {/*  <p>I love music and color!  I just recently got into coding.  I am excited about the prospect of ut enabling me to make different </p>*/}
-          <RGBSlider />
         </div>
         <div className='imgContainer'>
         <img className='bioImage' src={process.env.PUBLIC_URL + '/IMG_0779.jpeg'} alt="Jason" />
@@ -28,7 +26,7 @@ const Body = (props) => {
           <h2>Projects</h2>
           <div className='projectDeck'>
             <div className='projectCard'>
-              <a className='pinkLink' href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><h3>Kingfisher Tie Dye</h3></a>
+              <h3>Kingfisher Tie Dye <a href='https://github.com/IntuitiveHarmony/CRUDProject' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
               <a href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>Full stack CRUD app that allows this business to showcase their work and connect with their customers</li>
@@ -36,7 +34,7 @@ const Body = (props) => {
               </ul>
             </div>
             <div className='projectCard'>
-              <a className='pinkLink' href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><h3>Tile-r</h3></a>
+              <h3>Tile-r <a href='https://github.com/IntuitiveHarmony/tile-r' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
               <a href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Tile-r.png'} alt="Tile-r Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>React app that allows user to tile and scale images from the web</li>
@@ -50,7 +48,7 @@ const Body = (props) => {
               </ul>
             </div>
             <div className='projectCard'>
-              <a className='pinkLink' href='https://intuitiveharmony.github.io/breeze_front/' target="_blank" rel="noopener noreferrer"><h3>PolyBeast</h3></a>
+              <h3>PolyBeast <a href='https://github.com/IntuitiveHarmony/breeze_front' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
               <a href='https://intuitiveharmony.github.io/breeze_front/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Polybeast.png'} alt="Polybeast Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>Full stack CRUD app that allows the user to make musical sequences of varying complexity, save their creation and edit it later</li>
@@ -59,7 +57,7 @@ const Body = (props) => {
               </ul>
             </div>
             <div className='projectCard'>
-              <a className='pinkLink' href='https://sleepy-gorge-06614.herokuapp.com/' target="_blank" rel="noopener noreferrer"><h3>Movie Database</h3></a>
+              <h3>Movie Database <a href='https://github.com/IntuitiveHarmony/moviefrontend' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
               <a href='https://sleepy-gorge-06614.herokuapp.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/MovieApp.png'} alt="Movie App Thumbnail" /></a>
               <ul>
                 <li className='projectBullet'>Full stack CRUD app that allows user to search The Movie Database Api and save movies into 'My Movies' which is then stored in our own database</li>
