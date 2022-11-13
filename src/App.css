@@ -45,6 +45,13 @@ option {
   color: lime;
   max-width: 300px;
 }
+ul {
+  list-style: none;
+  /* list-style-type: cjk-ideographic; */
+}
+/* li::marker {
+  content: '#';
+} */
 .yellowTxt {
   color: yellow;
 }
@@ -283,19 +290,45 @@ option {
     padding: ;
   }
   .contentContainer {
-    padding: 1em;
-    margin-left: 1em;
+    padding: .3em;
+    margin-top: 1em;
+    margin-left: .5em;
     width: 90%;
     flex-direction: column;
   }
   .aboutContainer {
     display: flex;
-  flex-direction: column;
+    flex-direction: column;
   }
   .bioImage {
     max-width: 15em;
   }
   .aboutContainer {
     width: 100%;
+  }
+  .projectContainer {
+    padding: .3em;
+    margin-top: 1em;
+    margin-left: .5em;
+    width: 90%;
+  }
+  .gamesContainer {
+    width: 99%;
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 10em;
+    margin-bottom: .3em;
+    height: 1em;
+    outline: none;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid rgb(0, 180, 255);
+    width: .7em;
+    height: 1em;
+    background: black;
+    cursor: pointer;
   }
 }
