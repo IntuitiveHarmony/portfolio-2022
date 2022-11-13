@@ -112,15 +112,15 @@ const RPS = () => {
           : <></> }
         {rock_paper ?
           <>
-            <p>Player Chose: <span className='greenTxt'>{playerMove}</span></p>
-            <p>Computer Chose: <span className='redTxt'>{computerMove}</span></p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span></p>
+            <p>Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }
         {paper_scissor ?
           <>
-            <p>Player Chose: <span className='greenTxt'>{playerMove}</span></p>
-            <p>Computer Chose: <span className='redTxt'>{computerMove}</span></p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span></p>
+            <p>Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }
@@ -133,8 +133,8 @@ const RPS = () => {
           : <></> }
         {scissor_rock ?
           <>
-            <p>Player Chose: <span className='greenTxt'>{playerMove}</span></p>
-            <p>Computer Chose: <span className='redTxt'>{computerMove}</span></p>
+            <p>Player Chose: <span className='redTxt'>{playerMove}</span></p>
+            <p>Computer Chose: <span className='greenTxt'>{computerMove}</span></p>
             <p>Computer Wins!</p>
           </>
           : <></> }

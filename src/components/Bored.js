@@ -39,7 +39,7 @@ const Bored = () => {
   return (
     <>
       <h3 id='bored'>I'm Bored <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Bored.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
-      <p>Feeling uninspired? <br/> - Use the dropdown to pick a type (optional) <br/> - Press the button to generate a random activity <br/>- Keep pressing the buttin to make a list <br/><br/> Powered by the <a href='https://www.boredapi.com/' target="_blank" rel="noopener noreferrer" className='pinkLink'>Bored API</a></p>
+      <p>Feeling uninspired? <br/> - Use the dropdown to pick a type (optional) <br/> - Press the button to generate a random activity <br/>- Keep pressing the button to make a list <br/><br/> Powered by the <a href='https://www.boredapi.com/' target="_blank" rel="noopener noreferrer" className='pinkLink'>Bored API</a></p>
       <select onChange={handleType}>
         <option disabled selected>Select Type (optional)</option>
         {bored ? bored.type === 'education' ? <option value='education' selected>Education</option> : <option value='education'>Education</option> : <option value='education'>Education</option> }
