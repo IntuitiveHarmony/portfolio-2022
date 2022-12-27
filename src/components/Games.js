@@ -8,17 +8,17 @@ const Games = () => {
 
   return (
     <div className='projectContainer'>
-        <RGBSlider />
-        <br/>
-        <br/>
-        <h2>Games</h2>
-        <RPS />
-        <br/>
-        <br/>
-        <Palindrome />
-        <br/>
-        <br/>
-        <Bored />
+      <RGBSlider />
+      <br/>
+      <br/>
+      <h2>Games</h2>
+      <RPS />
+      <br/>
+      <br/>
+      <Palindrome />
+      <br/>
+      <br/>
+      <Bored />
     </div>
   )
 }
