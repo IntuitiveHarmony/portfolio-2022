@@ -20,7 +20,7 @@ const Games = () => {
       <br/>
       <br/>
       <Bored />
-      <BoredTable />
+      {/* <BoredTable /> */}
     </div>
   )
 }
