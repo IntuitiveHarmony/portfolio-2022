@@ -13,9 +13,6 @@ const Palindrome = () => {
   }
 
   const handleSubmit = (event) => {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
     // Check if the input string is a palindrome
     palindrome(inputStr);
   };

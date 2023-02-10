@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import './App.css'
 
 const App = () => {
+  //test
   const [home, setHome] = useState(true)
   const [projects, setProjects] = useState(false)
   const [games, setGames] = useState(false)
