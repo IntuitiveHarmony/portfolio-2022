@@ -2,6 +2,7 @@ import RPS from './RPS'
 import Palindrome from './Palindrome'
 import RGBSlider from './RGBSlider'
 import Bored from './Bored'
+import BoredTable from './BoredTable'
 
 const Games = () => {
 
@@ -19,6 +20,7 @@ const Games = () => {
       <br/>
       <br/>
       <Bored />
+      {/* <BoredTable /> */}
     </div>
   )
 }

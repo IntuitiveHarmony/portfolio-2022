@@ -145,9 +145,25 @@ ul {
   margin: 1em;
   margin-right: 3em;
 }
+@keyframes rainbow {
+  0% {filter: hue-rotate(419deg) saturate(300%) drop-shadow(0 -6mm 5mm rgb(160, 0, 210))}
+
+  25% {filter: hue-rotate(340deg) saturate(300%) drop-shadow(0 -6mm 5mm rgb(23, 234, 16))}
+
+  75% {filter: hue-rotate(230deg) saturate(300%) drop-shadow(0 -6mm 5mm rgb(4, 184, 196))}
+
+  100% {filter: hue-rotate(59deg) saturate(300%) drop-shadow(0 -6mm 5mm rgb(160, 0, 210))}
+}
+@keyframes flames {
+  from {filter: drop-shadow(0 -6mm 5mm rgb(160, 0, 210))}
+  to {filter: drop-shadow(0 -6mm 5mm rgb(23, 234, 16))}
+}
 .bioImage {
-  filter: hue-rotate(85deg) saturate(300%);
+  filter: hue-rotate(59deg) saturate(300%) drop-shadow(0 -6mm 5mm rgb(160, 0, 210));
   max-width: 20em;
+  animation-name: rainbow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 .projectContainer {
   display: flex;
