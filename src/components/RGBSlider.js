@@ -22,7 +22,7 @@ const RGBSlider = () => {
 
   return (
     <>
-      <h3>RGB Color Sliders <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/RGBSlider.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
+      <h3 id="RGBSliders">RGB Color Sliders <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/RGBSlider.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
 
       <div className='RGBView'
             style={{
