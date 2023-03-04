@@ -3,13 +3,23 @@ import { useState } from 'react'
 
 const Calculator = () => {
     const [result, setResult] = useState(0)
-    const [num1, setNum1] = useState()
+    const [num1, setNum1] = useState(0)
     const [num2, sertNum2] = useState()
     const [display, setDisplay] = useState()
+    const [firstNumEntered, setFirstNumberEntered] = useState(false)
+    
 
-    const handleUpdateValue = () => {
-        if(num1 == undefined)
+    const handleUpdateValue = (value) => {
+        if(!firstNumEntered) {
+            if(num1 == 0) {
+                setNum1(value)
+            } else {
+                setNum1(num1 + value)
+            }
+        }
     }
+
+
     const add = () => {
         setResult(num1 + num2)
     }
@@ -29,8 +39,8 @@ const Calculator = () => {
                 <div>-</div>
                 <div>+</div>
                 <div>=</div>
-                <div>1</div>
-                <div>2</div>
+                <div onClick={() => handleUpdateValue('1')}>1</div>
+                <div onClick={() => handleUpdateValue('2')}>2</div>
                 <div>3</div>
                 <div>4</div>
                 <div>5</div>
