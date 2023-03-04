@@ -4,7 +4,7 @@ import { useState } from 'react'
 const Calculator = () => {
     const [result, setResult] = useState(0)
     const [num1, setNum1] = useState(0)
-    const [num2, sertNum2] = useState()
+    const [num2, setNum2] = useState(0)
     const [display, setDisplay] = useState(num1)
     const [firstNumEntered, setFirstNumberEntered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
@@ -23,12 +23,24 @@ const Calculator = () => {
                 setNum1(num1 + value)
                 setDisplay(num1 + value)
             }
+        } else {
+            if(num2 == 0) {
+                setNum2(value)
+                setDisplay(value)
+            } else {
+                setNum2(num2 + value)
+                setDisplay(num2 + value)
+            }
         }
     }
-
+    const handleUpdateOperator = (value) => {
+        setOperator(value)
+        setFirstNumberEntered(true)
+    }
 
     const add = () => {
         setResult(num1 + num2)
+        
     }
 
 
@@ -41,10 +53,10 @@ const Calculator = () => {
                 <div>Clear</div>
                 <div>+/-</div>
                 <div>%</div>
-                <div>/</div>
-                <div>X</div>
-                <div>-</div>
-                <div>+</div>
+                <div onClick={() => handleUpdateOperator('/')}>/</div>
+                <div onClick={() => handleUpdateOperator('X')}>X</div>
+                <div onClick={() => handleUpdateOperator('-')}>-</div>
+                <div onClick={() => handleUpdateOperator('+')}>+</div>
                 <div>=</div>
                 <div onClick={() => handleUpdateValue('1')}>1</div>
                 <div onClick={() => handleUpdateValue('2')}>2</div>
