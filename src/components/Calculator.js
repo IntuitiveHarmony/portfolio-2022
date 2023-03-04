@@ -7,9 +7,13 @@ const Calculator = () => {
     const [num2, sertNum2] = useState()
     const [display, setDisplay] = useState()
     const [firstNumEntered, setFirstNumberEntered] = useState(false)
+    const [decimalEntered, setDecimalEntered] = useState(false)
     
 
     const handleUpdateValue = (value) => {
+        if(value == '.') { 
+            setDecimalEntered(true)
+        }
         if(!firstNumEntered) {
             if(num1 == 0) {
                 setNum1(value)
@@ -41,15 +45,15 @@ const Calculator = () => {
                 <div>=</div>
                 <div onClick={() => handleUpdateValue('1')}>1</div>
                 <div onClick={() => handleUpdateValue('2')}>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-                <div>9</div>
-                <div>0</div>
-                <div>.</div>
+                <div onClick={() => handleUpdateValue('3')}>3</div>
+                <div onClick={() => handleUpdateValue('4')}>4</div>
+                <div onClick={() => handleUpdateValue('5')}>5</div>
+                <div onClick={() => handleUpdateValue('6')}>6</div>
+                <div onClick={() => handleUpdateValue('7')}>7</div>
+                <div onClick={() => handleUpdateValue('8')}>8</div>
+                <div onClick={() => handleUpdateValue('9')}>9</div>
+                <div onClick={() => handleUpdateValue('0')}>0</div>
+                {decimalEntered ? <div>.</div> : <div onClick={() => handleUpdateValue('.')}>.</div> } 
                 
             </div>
         </>
