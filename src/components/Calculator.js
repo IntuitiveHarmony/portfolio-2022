@@ -5,9 +5,10 @@ const Calculator = () => {
     const [result, setResult] = useState(0)
     const [num1, setNum1] = useState(0)
     const [num2, sertNum2] = useState()
-    const [display, setDisplay] = useState()
+    const [display, setDisplay] = useState(num1)
     const [firstNumEntered, setFirstNumberEntered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
+    const [operator, setOperator] = useState()
     
 
     const handleUpdateValue = (value) => {
@@ -17,8 +18,10 @@ const Calculator = () => {
         if(!firstNumEntered) {
             if(num1 == 0) {
                 setNum1(value)
+                setDisplay(value)
             } else {
                 setNum1(num1 + value)
+                setDisplay(num1 + value)
             }
         }
     }
