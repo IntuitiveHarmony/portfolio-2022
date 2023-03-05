@@ -9,6 +9,7 @@ const Calculator = () => {
     const [num1Entered, setNum1Entered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
     const [negativeEntered, setNegativeEntered] = useState(false)
+    const [equalEntered, setEqualEntered] = useState(false)
 
     const [operator, setOperator] = useState(null)
     
@@ -82,7 +83,7 @@ const Calculator = () => {
             setDisplay(Number(num1) / Number(num2))
             setNum1(Number(num1) / Number(num2))
         }
-        if(operator == 'X') {
+        if(operator == '*') {
             setDisplay(Number(num1) * Number(num2))
             setNum1(Number(num1) * Number(num2))
         }
@@ -98,6 +99,7 @@ const Calculator = () => {
         // setNum2(0)
         // setFirstNumberEntered(false)
         setDecimalEntered(false)
+        setEqualEntered(true)
     }
 
     const handleClearAll = () => {
@@ -106,6 +108,7 @@ const Calculator = () => {
         setDisplay(0)
         setNum1Entered(false)
         setDecimalEntered(false)
+        setEqualEntered(false)
         setOperator()
     }
     const handleBackspace = () => {
@@ -125,13 +128,14 @@ const Calculator = () => {
         <>
             <h3>Calculator <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Calculator.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
             <div className='claculatorContainer'>
-                <div className='calculatorDisplay'> {display} </div>
+                {/* Multiline displpay */}
+                {equalEntered ? <div className='calculatorDisplay'> {display}</div> : num1Entered ? <div className='calculatorDisplay'> {num1} {operator} {num2}</div> : <div className='calculatorDisplay'> {display} </div> } 
                 <div className='calculatorButton clear' onClick={() => handleClearAll()}>C</div>
-                <div className='calculatorButton backspace' onClick={() => handleBackspace()}>"->"</div>
+                <div className='calculatorButton backspace' onClick={() => handleBackspace()}>B</div>
                 <div className='calculatorButton negative' onClick={() => handleNegative()}>+/-</div>
                 <div className='calculatorButton percent' onClick={() => handlePercentage()}>%</div>
                 <div className='calculatorButton divide' onClick={() => handleUpdateOperator('/')}>/</div>
-                <div className='calculatorButton multiply' onClick={() => handleUpdateOperator('X')}>X</div>
+                <div className='calculatorButton multiply' onClick={() => handleUpdateOperator('*')}>X</div>
                 <div className='calculatorButton subtract' onClick={() => handleUpdateOperator('-')}>-</div>
                 <div className='calculatorButton add' onClick={() => handleUpdateOperator('+')}>+</div>
                 <div className='calculatorButton equal' onClick={() => handleEnter()}>=</div>
