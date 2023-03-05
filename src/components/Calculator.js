@@ -68,19 +68,27 @@ const Calculator = () => {
         if(operator == '/') {
             setResult(Number(num1) / Number(num2))
             setDisplay(Number(num1) / Number(num2))
+            setNum1(Number(num1) / Number(num2))
         }
         if(operator == 'X') {
             setResult(Number(num1) * Number(num2))
             setDisplay(Number(num1) * Number(num2))
+            setNum1(Number(num1) * Number(num2))
         }
         if(operator == '-') {
             setResult(Number(num1) - Number(num2))
             setDisplay(Number(num1) - Number(num2))
+            setNum1(Number(num1) - Number(num2))
         }
         if(operator == '+') {
             setResult(Number(num1) + Number(num2))
             setDisplay(Number(num1) + Number(num2))
+            setNum1(Number(num1) + Number(num2))
         }
+        // setNum1(result)
+        // setNum2(0)
+        // setFirstNumberEntered(false)
+        setDecimalEntered(false)
     }
 
     const handleClearAll = () => {
