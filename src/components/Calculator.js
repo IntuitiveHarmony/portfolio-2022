@@ -5,6 +5,7 @@ const Calculator = () => {
     const [num1, setNum1] = useState(null)
     const [num2, setNum2] = useState(null)
     const [display, setDisplay] = useState(0)
+    const [error, setError] = useState(false)
 
     const [num1Entered, setNum1Entered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
@@ -13,7 +14,6 @@ const Calculator = () => {
 
     const [operator, setOperator] = useState(null)
     
-
     const handleUpdateValue = (value) => {
         if(value == '.') { 
             setDecimalEntered(true)
@@ -25,7 +25,12 @@ const Calculator = () => {
             } else {
                 setNum1(num1 + value)
                 setDisplay(num1 + value)
+                // console.log(Number.MAX_SAFE_INTEGER)
+                if(num1 > 9007199254740991) {
+                    setError(true)
+                }
             }
+            
         } else {
             if(num2 == null) {
                 setNum2(value)
@@ -33,7 +38,11 @@ const Calculator = () => {
             } else {
                 setNum2(num2 + value)
                 setDisplay(num2 + value)
+                if(num2 > 9007199254740991) {
+                    setError(true)
+                }
             }
+            
         }
     }
     const handleUpdateOperator = (value) => {
@@ -98,6 +107,9 @@ const Calculator = () => {
         // setNum1(result)
         // setNum2(0)
         // setFirstNumberEntered(false)
+        if(display > 9007199254740991) {
+            setError(true)
+        }
         setDecimalEntered(false)
         setEqualEntered(true)
     }
@@ -110,6 +122,7 @@ const Calculator = () => {
         setDecimalEntered(false)
         setEqualEntered(false)
         setOperator()
+        setError(false)
     }
     const handleBackspace = () => {
         if(!num1Entered) {
@@ -127,9 +140,10 @@ const Calculator = () => {
     return (
         <>
             <h3>Calculator <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Calculator.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
+            <p> <span className='pinkTxt'>WARNING!</span> this was made using javaScript.  I cannot gaurantee it's accuraccy.  I put in some error handling that will not allow numbers larger than <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER" className='pinkLink' target="_blank" rel="noopener noreferrer">9,007,199,254,740,991</a> (9 quadrillion)</p>
             <div className='claculatorContainer'>
-                {/* Multiline displpay */}
-                {equalEntered ? <div className='calculatorDisplay'> {display}</div> : num1Entered ? <div className='calculatorDisplay'> {num1} {operator} {num2}</div> : <div className='calculatorDisplay'> {display} </div> } 
+                {/* Multi displpay */}
+                {error ? <div className='calculatorDisplay pinkTxt'> ERROR </div> : equalEntered ? <div className='calculatorDisplay'> {display} </div> : num1Entered ? <div className='calculatorDisplay'> {num1} {operator} {num2}</div> : <div className='calculatorDisplay'> {display} </div> } 
                 <div className='calculatorButton clear' onClick={() => handleClearAll()}>C</div>
                 <div className='calculatorButton backspace' onClick={() => handleBackspace()}>B</div>
                 <div className='calculatorButton negative' onClick={() => handleNegative()}>+/-</div>
