@@ -140,7 +140,10 @@ const Calculator = () => {
     return (
         <>
             <h3>Calculator <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Calculator.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
-            <p> <span className='pinkTxt'>WARNING!</span> this was made using javaScript.  I cannot gaurantee it's accuraccy.  I put in some error handling that will not allow numbers larger than <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER" className='pinkLink' target="_blank" rel="noopener noreferrer">9,007,199,254,740,991</a> (9 quadrillion)</p>
+            <p> <span className='yellowTxt'>WARNING!</span> this was made using javaScript.  I cannot gaurantee it's accuraccy.</p>  
+            
+            <p>JavaScript doesn't handle floating point integers vary well.  (try 0.1 + 0.2 ).</p> 
+            <p>This calculator will not allow numbers larger than <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER" className='pinkLink' target="_blank" rel="noopener noreferrer">9,007,199,254,740,991</a> (9 quadrillion).</p>
             <div className='claculatorContainer'>
                 {/* Multi displpay */}
                 {error ? <div className='calculatorDisplay pinkTxt'> ERROR </div> : equalEntered ? <div className='calculatorDisplay'> {display} </div> : num1Entered ? <div className='calculatorDisplay'> {num1} {operator} {num2}</div> : <div className='calculatorDisplay'> {display} </div> } 
