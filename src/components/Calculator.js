@@ -63,6 +63,15 @@ const Calculator = () => {
             }
         }
     }
+    const handlePercentage = () => {
+        if(!firstNumEntered) {
+            setNum1(num1 / 100)
+            setDisplay(num1 / 100)
+        } else {
+            setNum2(num2 / 100)
+            setDisplay(num2 / 100)
+        }
+    }
     const handleEnter = () => {
         if(operator == '/') {
             setDisplay(Number(num1) / Number(num2))
@@ -100,26 +109,26 @@ const Calculator = () => {
         <>
             <h3>Calculator</h3>
             <div className='claculatorContainer'>
-                <div> {display} </div>
-                <div onClick={() => handleClearAll()}>Clear All</div>
-                <div onClick={() => handleNegative()}>+/-</div>
-                <div>%</div>
-                <div onClick={() => handleUpdateOperator('/')}>/</div>
-                <div onClick={() => handleUpdateOperator('X')}>X</div>
-                <div onClick={() => handleUpdateOperator('-')}>-</div>
-                <div onClick={() => handleUpdateOperator('+')}>+</div>
-                <div onClick={() => handleEnter()}>=</div>
-                <div onClick={() => handleUpdateValue('1')}>1</div>
-                <div onClick={() => handleUpdateValue('2')}>2</div>
-                <div onClick={() => handleUpdateValue('3')}>3</div>
-                <div onClick={() => handleUpdateValue('4')}>4</div>
-                <div onClick={() => handleUpdateValue('5')}>5</div>
-                <div onClick={() => handleUpdateValue('6')}>6</div>
-                <div onClick={() => handleUpdateValue('7')}>7</div>
-                <div onClick={() => handleUpdateValue('8')}>8</div>
-                <div onClick={() => handleUpdateValue('9')}>9</div>
-                <div onClick={() => handleUpdateValue('0')}>0</div>
-                {decimalEntered ? <div>.</div> : <div onClick={() => handleUpdateValue('.')}>.</div> } 
+                <div className='calculatorDisplay'> {display} </div>
+                <div className='calculatorButton' onClick={() => handleClearAll()}>Clear All</div>
+                <div className='calculatorButton' onClick={() => handleNegative()}>+/-</div>
+                <div className='calculatorButton' onClick={() => handlePercentage()}>%</div>
+                <div className='calculatorButton' onClick={() => handleUpdateOperator('/')}>/</div>
+                <div className='calculatorButton' onClick={() => handleUpdateOperator('X')}>X</div>
+                <div className='calculatorButton' onClick={() => handleUpdateOperator('-')}>-</div>
+                <div className='calculatorButton' onClick={() => handleUpdateOperator('+')}>+</div>
+                <div className='calculatorButton' onClick={() => handleEnter()}>=</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('1')}>1</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('2')}>2</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('3')}>3</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('4')}>4</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('5')}>5</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('6')}>6</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('7')}>7</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('8')}>8</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('9')}>9</div>
+                <div className='calculatorButton' onClick={() => handleUpdateValue('0')}>0</div>
+                {decimalEntered ? <div className='calculatorButton'>.</div> : <div className='calculatorButton' onClick={() => handleUpdateValue('.')}>.</div> } 
                 
             </div>
         </>
