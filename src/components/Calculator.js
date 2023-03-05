@@ -10,7 +10,7 @@ const Calculator = () => {
     const [decimalEntered, setDecimalEntered] = useState(false)
     const [negativeEntered, setNegativeEntered] = useState(false)
 
-    const [operator, setOperator] = useState()
+    const [operator, setOperator] = useState(null)
     
 
     const handleUpdateValue = (value) => {
@@ -36,7 +36,11 @@ const Calculator = () => {
         }
     }
     const handleUpdateOperator = (value) => {
+        if(num1 == null) {
+            setNum1(0)
+        }
         setOperator(value)
+        setDecimalEntered(false)
         setFirstNumberEntered(true)
         setNegativeEntered(false)
         setNum2(null) 

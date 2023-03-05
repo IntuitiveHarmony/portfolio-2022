@@ -280,6 +280,7 @@ ul {
   height: 2.5rem;
 }
 .claculatorContainer {
+  max-width: 30em;
   display: grid;
   border: 1px solid rgb(0, 180, 255);
 }
