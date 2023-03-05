@@ -6,8 +6,11 @@ const Calculator = () => {
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
     const [display, setDisplay] = useState(0)
+
     const [firstNumEntered, setFirstNumberEntered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
+    const [negativeEntered, setNegativeEntered] = useState(false)
+
     const [operator, setOperator] = useState()
     
 
@@ -36,8 +39,31 @@ const Calculator = () => {
     const handleUpdateOperator = (value) => {
         setOperator(value)
         setFirstNumberEntered(true)
+        setNegativeEntered(false) 
     }
-    
+    const handleNegative = () => {
+        if(!operator) {
+            if(!negativeEntered) {
+                setNum1('-' + num1)
+                setDisplay('-' + num1)
+                setNegativeEntered(!negativeEntered)
+            } else {
+                setNum1(num1.slice(1))
+                setDisplay(num1.slice(1))
+                setNegativeEntered(!negativeEntered)
+            }
+        } else {
+            if(!negativeEntered) {
+                setNum2('-' + num2)
+                setDisplay('-' + num2)
+                setNegativeEntered(!negativeEntered)
+            } else {
+                setNum2(num2.slice(1))
+                setDisplay(num2.slice(1))
+                setNegativeEntered(!negativeEntered)
+            }
+        }
+    }
     const handleEnter = () => {
         if(operator == '/') {
             setResult(Number(num1) / Number(num2))
@@ -55,7 +81,6 @@ const Calculator = () => {
             setResult(Number(num1) + Number(num2))
             setDisplay(Number(num1) + Number(num2))
         }
-        
     }
 
     const handleClearAll = () => {
@@ -75,7 +100,7 @@ const Calculator = () => {
             <div className='claculatorContainer'>
                 <div> {display} </div>
                 <div onClick={() => handleClearAll()}>Clear All</div>
-                <div>+/-</div>
+                <div onClick={() => handleNegative()}>+/-</div>
                 <div>%</div>
                 <div onClick={() => handleUpdateOperator('/')}>/</div>
                 <div onClick={() => handleUpdateOperator('X')}>X</div>
