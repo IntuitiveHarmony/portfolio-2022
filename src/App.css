@@ -295,6 +295,7 @@ ul {
 .calculatorDisplay {
   grid-area: display;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   height: 1.3em;
   font-size: 2em;
