@@ -61,7 +61,7 @@ const Palindrome = () => {
   //    }
   // }
 
-  // Here is Chat GPT DRYing out my palindrome code and making it better:
+  // Here is Chat GPT DRYing out my palindrome code:
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function palindrome(str) {
     setStart(true);

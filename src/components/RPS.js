@@ -109,7 +109,7 @@ const RPS = () => {
       setScissor_paper(true);
     }
   }
-
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   const handleRock = () => {
     rockPaperScissor('Rock')
   }
