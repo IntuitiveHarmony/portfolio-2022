@@ -126,26 +126,26 @@ const Calculator = () => {
             <h3>Calculator</h3>
             <div className='claculatorContainer'>
                 <div className='calculatorDisplay'> {display} </div>
-                <div className='calculatorButton' onClick={() => handleClearAll()}>Clear All</div>
-                <div className='calculatorButton' onClick={() => handleBackspace()}>Backspace</div>
-                <div className='calculatorButton' onClick={() => handleNegative()}>+/-</div>
-                <div className='calculatorButton' onClick={() => handlePercentage()}>%</div>
-                <div className='calculatorButton' onClick={() => handleUpdateOperator('/')}>/</div>
-                <div className='calculatorButton' onClick={() => handleUpdateOperator('X')}>X</div>
-                <div className='calculatorButton' onClick={() => handleUpdateOperator('-')}>-</div>
-                <div className='calculatorButton' onClick={() => handleUpdateOperator('+')}>+</div>
-                <div className='calculatorButton' onClick={() => handleEnter()}>=</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('1')}>1</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('2')}>2</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('3')}>3</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('4')}>4</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('5')}>5</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('6')}>6</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('7')}>7</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('8')}>8</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('9')}>9</div>
-                <div className='calculatorButton' onClick={() => handleUpdateValue('0')}>0</div>
-                {decimalEntered ? <div className='calculatorButton'>.</div> : <div className='calculatorButton' onClick={() => handleUpdateValue('.')}>.</div> } 
+                <div className='calculatorButton clear' onClick={() => handleClearAll()}>C</div>
+                <div className='calculatorButton backspace' onClick={() => handleBackspace()}>-></div>
+                <div className='calculatorButton negative' onClick={() => handleNegative()}>+/-</div>
+                <div className='calculatorButton percent' onClick={() => handlePercentage()}>%</div>
+                <div className='calculatorButton divide' onClick={() => handleUpdateOperator('/')}>/</div>
+                <div className='calculatorButton multiply' onClick={() => handleUpdateOperator('X')}>X</div>
+                <div className='calculatorButton subtract' onClick={() => handleUpdateOperator('-')}>-</div>
+                <div className='calculatorButton add' onClick={() => handleUpdateOperator('+')}>+</div>
+                <div className='calculatorButton equal' onClick={() => handleEnter()}>=</div>
+                <div className='calculatorButton num1' onClick={() => handleUpdateValue('1')}>1</div>
+                <div className='calculatorButton num2' onClick={() => handleUpdateValue('2')}>2</div>
+                <div className='calculatorButton num3' onClick={() => handleUpdateValue('3')}>3</div>
+                <div className='calculatorButton num4' onClick={() => handleUpdateValue('4')}>4</div>
+                <div className='calculatorButton num5' onClick={() => handleUpdateValue('5')}>5</div>
+                <div className='calculatorButton num6' onClick={() => handleUpdateValue('6')}>6</div>
+                <div className='calculatorButton num7' onClick={() => handleUpdateValue('7')}>7</div>
+                <div className='calculatorButton num8' onClick={() => handleUpdateValue('8')}>8</div>
+                <div className='calculatorButton num9' onClick={() => handleUpdateValue('9')}>9</div>
+                <div className='calculatorButton num0' onClick={() => handleUpdateValue('0')}>0</div>
+                {decimalEntered ? <div className='calculatorButton nump'>.</div> : <div className='calculatorButton' onClick={() => handleUpdateValue('.')}>.</div> } 
                 
             </div>
         </>
