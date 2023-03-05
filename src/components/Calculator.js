@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 
 const Calculator = () => {
-    const [result, setResult] = useState(0)
     const [num1, setNum1] = useState(0)
     const [num2, setNum2] = useState(0)
     const [display, setDisplay] = useState(0)
@@ -66,22 +65,18 @@ const Calculator = () => {
     }
     const handleEnter = () => {
         if(operator == '/') {
-            setResult(Number(num1) / Number(num2))
             setDisplay(Number(num1) / Number(num2))
             setNum1(Number(num1) / Number(num2))
         }
         if(operator == 'X') {
-            setResult(Number(num1) * Number(num2))
             setDisplay(Number(num1) * Number(num2))
             setNum1(Number(num1) * Number(num2))
         }
         if(operator == '-') {
-            setResult(Number(num1) - Number(num2))
             setDisplay(Number(num1) - Number(num2))
             setNum1(Number(num1) - Number(num2))
         }
         if(operator == '+') {
-            setResult(Number(num1) + Number(num2))
             setDisplay(Number(num1) + Number(num2))
             setNum1(Number(num1) + Number(num2))
         }
@@ -92,7 +87,6 @@ const Calculator = () => {
     }
 
     const handleClearAll = () => {
-        setResult(0)
         setNum1(0)
         setNum2(0)
         setDisplay(0)
