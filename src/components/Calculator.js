@@ -6,7 +6,7 @@ const Calculator = () => {
     const [num2, setNum2] = useState(null)
     const [display, setDisplay] = useState(0)
 
-    const [firstNumEntered, setFirstNumberEntered] = useState(false)
+    const [num1Entered, setNum1Entered] = useState(false)
     const [decimalEntered, setDecimalEntered] = useState(false)
     const [negativeEntered, setNegativeEntered] = useState(false)
 
@@ -17,7 +17,7 @@ const Calculator = () => {
         if(value == '.') { 
             setDecimalEntered(true)
         }
-        if(!firstNumEntered) {
+        if(!num1Entered) {
             if(num1 == null) {
                 setNum1(value)
                 setDisplay(value)
@@ -41,7 +41,7 @@ const Calculator = () => {
         }
         setOperator(value)
         setDecimalEntered(false)
-        setFirstNumberEntered(true)
+        setNum1Entered(true)
         setNegativeEntered(false)
         setNum2(null) 
     }
@@ -69,7 +69,7 @@ const Calculator = () => {
         }
     }
     const handlePercentage = () => {
-        if(!firstNumEntered) {
+        if(!num1Entered) {
             setNum1(num1 / 100)
             setDisplay(num1 / 100)
         } else {
@@ -104,12 +104,12 @@ const Calculator = () => {
         setNum1(null)
         setNum2(null)
         setDisplay(0)
-        setFirstNumberEntered(false)
+        setNum1Entered(false)
         setDecimalEntered(false)
         setOperator()
     }
     const handleBackspace = () => {
-        if(!firstNumEntered) {
+        if(!num1Entered) {
             setNum1(num1.slice(0, -1))
             setDisplay(display.slice(0, -1))
         } else {
@@ -123,11 +123,11 @@ const Calculator = () => {
 
     return (
         <>
-            <h3>Calculator</h3>
+            <h3>Calculator <a href='https://github.com/IntuitiveHarmony/portfolio-2022/blob/main/src/components/Calculator.js' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
             <div className='claculatorContainer'>
                 <div className='calculatorDisplay'> {display} </div>
                 <div className='calculatorButton clear' onClick={() => handleClearAll()}>C</div>
-                <div className='calculatorButton backspace' onClick={() => handleBackspace()}>-></div>
+                <div className='calculatorButton backspace' onClick={() => handleBackspace()}>"->"</div>
                 <div className='calculatorButton negative' onClick={() => handleNegative()}>+/-</div>
                 <div className='calculatorButton percent' onClick={() => handlePercentage()}>%</div>
                 <div className='calculatorButton divide' onClick={() => handleUpdateOperator('/')}>/</div>
