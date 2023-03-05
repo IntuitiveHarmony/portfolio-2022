@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 
 const Calculator = () => {
-    const [num1, setNum1] = useState(0)
-    const [num2, setNum2] = useState(0)
+    const [num1, setNum1] = useState(null)
+    const [num2, setNum2] = useState(null)
     const [display, setDisplay] = useState(0)
 
     const [firstNumEntered, setFirstNumberEntered] = useState(false)
@@ -18,7 +18,7 @@ const Calculator = () => {
             setDecimalEntered(true)
         }
         if(!firstNumEntered) {
-            if(num1 == 0) {
+            if(num1 == null) {
                 setNum1(value)
                 setDisplay(value)
             } else {
@@ -26,7 +26,7 @@ const Calculator = () => {
                 setDisplay(num1 + value)
             }
         } else {
-            if(num2 == 0) {
+            if(num2 == null) {
                 setNum2(value)
                 setDisplay(value)
             } else {
@@ -38,7 +38,8 @@ const Calculator = () => {
     const handleUpdateOperator = (value) => {
         setOperator(value)
         setFirstNumberEntered(true)
-        setNegativeEntered(false) 
+        setNegativeEntered(false)
+        setNum2(null) 
     }
     const handleNegative = () => {
         if(!operator) {
@@ -96,12 +97,23 @@ const Calculator = () => {
     }
 
     const handleClearAll = () => {
-        setNum1(0)
-        setNum2(0)
+        setNum1(null)
+        setNum2(null)
         setDisplay(0)
         setFirstNumberEntered(false)
         setDecimalEntered(false)
         setOperator()
+    }
+    const handleBackspace = () => {
+        if(!firstNumEntered) {
+            setNum1(num1.slice(0, -1))
+            setDisplay(display.slice(0, -1))
+        } else {
+            if(!num2) {
+                setNum2(num2.slice(0, -1))
+                setDisplay(display.slice(0, -1))
+            }
+        }
     }
 
 
@@ -111,6 +123,7 @@ const Calculator = () => {
             <div className='claculatorContainer'>
                 <div className='calculatorDisplay'> {display} </div>
                 <div className='calculatorButton' onClick={() => handleClearAll()}>Clear All</div>
+                <div className='calculatorButton' onClick={() => handleBackspace()}>Backspace</div>
                 <div className='calculatorButton' onClick={() => handleNegative()}>+/-</div>
                 <div className='calculatorButton' onClick={() => handlePercentage()}>%</div>
                 <div className='calculatorButton' onClick={() => handleUpdateOperator('/')}>/</div>
