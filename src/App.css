@@ -2,18 +2,24 @@ body {
   background-color: black;
 }
 
-body::after {
-  content: "";
+#root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#root::after {
   background: url('https://mj-gallery.com/566ba53b-9328-4b06-8ca9-2a3af586e0f2/grid_0.png');
+  background-repeat: repeat;
   background-size: 400px;
   opacity: 0.4;
+  content: "";
+  object-fit: contain;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
-  height: 100vh;
 }
 h1 {
   font-size: 2.5em;
@@ -60,6 +66,9 @@ ul {
 }
 .redTxt {
   color: red;
+}
+.skillsWrapper {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .submitBtn{
   max-width: 3em;
@@ -271,12 +280,17 @@ ul {
   text-decoration: none;
 }
 .footer {
-  padding-left: 2em;
+  /* background-color: black; */
+  font-size: .85em;
+  display: flex;
+  padding: auto 0;
+  flex-direction: row-reverse;
+  padding-right: 1em;
   color: rgb(0, 180, 255);
-  background-color: rgba(0, 0, 0, .7);
-  position: absolute;
+  background-color: rgba(80, 16, 81, 1);
+  /* position: absolute; */
   bottom: 0;
-  width: 100%;
+  /* width: 100%; */
   height: 2.5rem;
 }
 .claculatorContainer {

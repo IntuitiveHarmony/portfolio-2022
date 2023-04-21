@@ -3,7 +3,7 @@ const Projects = () => {
     <>
       <div className='projectContainer'>
         <h2>Projects</h2>
-        <div className='projectDeck'>
+        {/* <div className='projectDeck'>
           <div className='projectCard'>
             <h3>Kingfisher Tie Dye <a href='https://github.com/IntuitiveHarmony/CRUDProject' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
             <a href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" /></a>
@@ -11,7 +11,16 @@ const Projects = () => {
               <li className='projectBullet'>Full stack CRUD app that allows this business to showcase their work and connect with their customers</li>
               <li className='projectBullet'>Built using Express, AtlasDB, jQuery, HTML5, CSS3, JavaScript, Heroku</li>
             </ul>
-          </div>
+          </div> */}
+          <div className='projectDeck'>
+          {/* <div className='projectCard'>
+            <h3>Landscaper <a href='https://github.com/IntuitiveHarmony/Landscaper_CPP#readme' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
+            <a href='http://kingfishertiedye.com/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Kingfisher.png'} alt="KingfisherTieDye.com Thumbnail" /></a>
+            <ul>
+              <li className='projectBullet'>Full stack CRUD app that allows this business to showcase their work and connect with their customers</li>
+              <li className='projectBullet'>Built using Express, AtlasDB, jQuery, HTML5, CSS3, JavaScript, Heroku</li>
+            </ul>
+          </div> */}
           <div className='projectCard'>
             <h3>Tile-r <a href='https://github.com/IntuitiveHarmony/tile-r' target="_blank" rel="noopener noreferrer"><i className="soc fa-brands fa-github pinkLink gitLink"></i></a></h3>
             <a href='https://intuitiveharmony.github.io/tile-r/' target="_blank" rel="noopener noreferrer"><img className='projectImage' src={process.env.PUBLIC_URL + '/Tile-r.png'} alt="Tile-r Thumbnail" /></a>
