@@ -68,7 +68,17 @@ ul {
   color: red;
 }
 .skillsWrapper {
+  /* display: flex; */
   background-color: rgba(0, 0, 0, 0.9);
+}
+.devTools {
+}
+.badge {
+  margin-right: .7em;
+}
+#apple {
+  position: relative;
+  bottom: .3em;
 }
 .submitBtn{
   max-width: 3em;
