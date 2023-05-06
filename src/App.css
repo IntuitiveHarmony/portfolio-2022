@@ -1,7 +1,12 @@
 body {
   background-color: black;
 }
-
+table {
+  max-width: 30em;
+}
+td {
+  padding: .5em;
+}
 #root {
   display: flex;
   flex-direction: column;
@@ -68,10 +73,12 @@ ul {
   color: red;
 }
 .skillsWrapper {
+  margin-top: 3em;
   /* display: flex; */
-  background-color: rgba(0, 0, 0, 0.9);
+  /* background-color: rgba(0, 0, 0, 0.9); */
 }
-.devTools {
+.skillsWrapper > div {
+  margin-left: 2em;
 }
 .badge {
   margin-right: .7em;
@@ -79,6 +86,14 @@ ul {
 #apple {
   position: relative;
   bottom: .3em;
+}
+#ableton {
+  position: relative;
+  bottom: .2em;
+}
+#django {
+  position: relative;
+  bottom: -.4em;
 }
 .submitBtn{
   max-width: 3em;
