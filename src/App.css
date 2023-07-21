@@ -216,7 +216,8 @@ ul {
   padding: 2em;
 }
 .projectImage {
-  max-width: 17em;
+  max-width: 15em;
+  max-height: 17em;
   border-radius: 1em;
   /* box-shadow: 0px 0px 50px magenta; */
 }
